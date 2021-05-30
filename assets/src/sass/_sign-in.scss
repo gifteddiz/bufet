@@ -1,0 +1,115 @@
+.sign-in{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sign-in__wrapper{
+  display: flex;
+  justify-content: center;
+}
+.sign-in__block{
+  width: 530px;
+  border-radius: 30px;
+  box-shadow: 0px 10px 25px rgba(60, 48, 29, 0.1);
+  background-color: #fff;
+  padding: 48px;
+}
+.sign-in__title{
+  font-size: 45px;
+  font-weight: bold;
+  color: #222325;
+}
+.sign-in__subtitle{
+  font-size: 20px;
+  font-weight: 300;
+  color: #484C51;
+  margin-bottom: 40px;
+  font-family: $roboto;
+}
+.sign-in__fieldset{
+  &+.sign-in__fieldset{
+    margin-top: 20px;
+  }
+}
+.sign-in__fieldset-label{
+  font-size: 16px;
+  color: #222325;
+  margin-bottom: 10px;
+  display: block;
+  font-family: $roboto;
+}
+.sign-in__fieldset-input{
+  width: 100%;
+  position: relative;
+  &.--success{
+    &:after{
+      content: '';
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      background-image: url('../images/check-green.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      width: 16px;
+      height: 16px;
+      transform: translateY(-50%);
+    }
+    input{
+      border-color: #484C51;
+    }
+  }
+  &.--error{
+    input{
+      background-color: #F9E3E3;
+    }
+  }
+  input{
+    width: 100%;
+    height: 55px;
+    border: 1.5px solid #C4C4C4;
+    border-radius: 15px;
+    padding: 0 10px;
+    font-size: 16px;
+    outline: none;
+    color: #222325;
+    &::placeholder{
+      color: #C4C4C4;
+    }
+  }
+}
+.sign-in__fieldset{
+  font-size: 16px;
+  color: #DB524E;
+  margin-top: 6px;
+  font-family: $roboto;
+}
+.sign-in__confirm{
+  margin-top: 40px;
+  width: 360px;
+  padding-left: 40px;
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
+.sign-in__confirm-checkbox{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sign-in__confirm-text{
+  line-height: 24px;
+  color: #484C51;
+}
+.sign-in__captcha{
+
+}
+.sign-in__submit{
+  width: 100%;
+  height: 63px;
+  font-size: 20px;
+  margin-top: 40px;
+}

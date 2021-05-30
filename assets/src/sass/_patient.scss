@@ -1,0 +1,125 @@
+.patient{
+  box-shadow: 0px 10px 25px rgba(60, 48, 29, 0.1);
+  background-color: #fff;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+.patient__row-1{
+    display: flex;
+    padding: 30px 30px 20px 30px;
+}
+.patient__id{
+  font-size: 20px;
+  color: #222325;
+  font-weight: bold;
+  margin-right: 20px;
+}
+.patient__tel{
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 20px;
+  text-decoration: none;
+}
+.patient__row-2{
+  padding: 30px;
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    background-image: url('../images/dash-line.svg');
+    background-repeat: repeat-x;
+  }
+}
+.patient__name{
+  font-size: 26px;
+  font-weight: bold;
+  color: #222325;
+  margin-bottom: 20px;
+  width: 600px;
+}
+.patient__data{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.patient__data-col{
+  
+}
+.patient__data-item{
+  font-size: 15px;
+  color: #484C51;
+  display: block;
+  &+.patient__data-item{
+    margin-top: 6px;
+  }
+  &.--italic{
+    font-style: italic;
+    font-family: $roboto;
+  }
+  &.--red{
+    color: #DB524E;
+  }
+}
+.patient__row-3{
+  padding: 20px 30px;
+  position: relative;
+  display: flex;
+  &:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    background-image: url('../images/dash-line.svg');
+    background-repeat: repeat-x;
+  }
+}
+.patient__diet{
+  font-family: $roboto;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 500;
+  margin-right: 73px;
+  color: #222325;
+}
+.patient__food-preferences{
+  font-size: 15px;
+  color: #484C51;
+}
+.patient__row-4{
+  padding: 30px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    background-image: url('../images/dash-line.svg');
+    background-repeat: repeat-x;
+  }
+}
+.patient__alergens{
+  font-family: $roboto;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 500;
+  margin-right: 73px;
+  color: #DB524E;
+}
+.patient__order{
+  width: 166px;
+  height: 40px;
+  svg{
+    margin-left: 8px;
+  }
+}

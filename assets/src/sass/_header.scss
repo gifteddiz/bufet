@@ -1,0 +1,39 @@
+.header{
+  height: 80px;
+  width: 100%;
+  display: flex;
+  border-radius: 0 0 30px 30px;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 40px;
+}
+.header__wrapper{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.header__logo{
+  width: 88px;
+  margin-right: auto;
+  display: block;
+  img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+.header__name{
+  font-size: 15px;
+  color: #222325;
+  margin-right: 20px;
+}
+.header__exit{
+  width: 20px;
+  img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

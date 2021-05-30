@@ -1,0 +1,62 @@
+.footer{
+  margin-top: auto;
+}
+.footer__outer-wrapper{
+  margin-top: 40px;
+  border-top: 1px solid #C4C4C4;
+  padding: 20px 0;
+}
+.footer__wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__logo{
+  display: block;
+  width: 88px;
+  margin-right: auto;
+  img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+.footer__call{
+  padding-left: 46px;
+  position: relative;
+  &:before{
+    content: '';
+    width: 34px;
+    height: 34px;
+    background-image: url('../images/footer__phone.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.footer__call-caption{
+  font-size: 13px;
+  color: #222325;
+  margin-bottom: 2px;
+}
+.footer__call-number{
+  font-size: 13px;
+  font-weight: bold;
+  color: #222325;
+}
+.footer__copy-n-agreement{
+  text-align: right;
+  margin-left: 50px;
+}
+.footer__copy{
+  color: #484C51;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+.footer__agreement{
+  font-size: 13px;
+  display: block;
+}

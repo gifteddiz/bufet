@@ -1,0 +1,96 @@
+.patients{
+
+}
+.patients__top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.patients__top-title{
+  font-size: 29px;
+  color: #222325;
+  margin-right: auto;
+}
+.patients__top-btns{
+  display: flex;
+}
+.patients__top-btn{
+  width: 207px;
+  height: 50px;
+  svg{
+    margin-left: 8px;
+  }
+  &+.patients__top-btn{
+    margin-left: 14px;
+  }
+}
+.patients__filter-n-search{
+  display: flex;
+  width: 100%;
+}
+.patients__filter{
+  width: 187px;
+  height: 50px;
+  flex-shrink: 0;
+  margin-right: 20px;
+  svg{
+    margin-right: 10px;
+  }
+}
+.patients__filter-text{
+
+}
+.patients__search{
+  display: flex;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.patients__search-input-n-checkboxes{
+  width: 100%;
+}
+.patients__search-input{
+  width: 100%;
+  height: 50px;
+  border: 1px solid #C4C4C4;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 0 16px;
+  font-family: $roboto;
+  font-size: 16px;
+  outline: none;
+  &::placeholder{
+    color: #C4C4C4;
+  }
+}
+.patients__search-checkboxes{
+  display: flex;
+  margin-left: auto;
+  width: 100%;
+  margin-top: 20px;
+}
+.patients__search-checkbox-item{
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  &+.patients__search-checkbox-item{
+    margin-left: 54px;
+  }
+}
+.patients__search-checkbox{
+  margin-right: 10px;
+}
+.patients__search-checkbox-text{
+  font-size: 16px;
+  font-family: $roboto;
+  color: #484C51;
+}
+.patients__search-submit{
+  flex-shrink: 0;
+  width: 118px;
+  height: 50px;
+  margin-left: 20px;
+}
+.patients__list{
+
+}
