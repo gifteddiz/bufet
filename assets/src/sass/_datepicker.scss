@@ -1,0 +1,58 @@
+.mx-calendar{
+  width: 363px;
+  *{
+    font-family: $roboto;
+  }
+}
+.mx-datepicker-main{
+  border-radius: 15px;
+  box-shadow: 0px 10px 25px rgba(49, 39, 22, 0.15);
+  
+}
+
+.mx-calendar-content{
+  height: auto;
+}
+
+.mx-table{
+  border-spacing: 4px;
+}
+
+.mx-table-date td, .mx-table-date th{
+
+}
+
+.mx-table-date th{
+  font-size: 15px;
+  color: #C4C4C4;
+  text-transform: uppercase;
+}
+
+.mx-table td{
+  background-color: rgba(42,115,189,.1);
+  height: 45px;
+  text-align: right;
+  font-size: 19px;
+  color: #484C51;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.mx-calendar-header-label *{
+  font-size: 18px;
+  color: #222325;
+}
+
+.mx-btn-icon-left,
+.mx-btn-icon-right{
+  background-color: #2A73BD;
+  color: #fff;
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+  font-size: 20px;
+}

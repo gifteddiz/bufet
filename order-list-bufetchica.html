@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/dist/css/style.css" />
+    <title>Буфетчица</title>
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__wrapper">
+            <a href="#" class="header__logo">
+              <img src="assets/dist/images/header__logo.png" alt="EMC - Group Of Companies European Medical Center" />
+            </a>
+            <a href="#" class="header__name">Константин Константинович</a>
+            <a href="#" class="header__exit">
+              <img src="assets/dist/images/header__logout.svg" alt="Выйти" />
+            </a>
+          </div>
+        </div>
+      </header>
+      <div class="order-list">
+        <div class="container">
+          <div class="order-list__title">Список заказанного</div>
+          <div class="order-list__dish-changed">Пациент сделал замену блюда</div>
+          <div class="order-list__filter">
+            <div class="order-list__filter-fieldset --name">
+              <div class="order-list__filter-name">
+                <input type="text" placeholder="Введите ФИО пациента, ID...">
+              </div>
+            </div>
+            <div class="order-list__filter-fieldset --small">
+              <div class="order-list__filter-label">С какого числа</div>
+              <div class="order-list__filter-date">
+                <input type="text" value="01.05.2021">
+              </div>
+            </div>
+            <div class="order-list__filter-fieldset --small">
+              <div class="order-list__filter-label">По какое</div>
+              <div class="order-list__filter-date">
+                <input type="text" value="07.05.2021">
+              </div>
+            </div>
+            <div class="order-list__filter-fieldset --small">
+              <div class="order-list__filter-label">Приём пищи</div>
+              <select class="order-list__filter-select">
+                <option>Все</option>
+              </select>
+            </div>
+            <div class="order-list__filter-fieldset --btn">
+              <a href="#" class="order-list__filter-btn btn-1">
+                Найти
+                <svg width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.00214 5.01963C7.0029 5.15062 6.97767 5.28046 6.92791 5.40172C6.87814 5.52298 6.80482 5.63327 6.71214 5.72627L2.71214 9.7073C2.6189 9.8001 2.50821 9.87371 2.38639 9.92393C2.26457 9.97415 2.134 10 2.00214 10C1.87028 10 1.73971 9.97415 1.61789 9.92393C1.49607 9.87371 1.38538 9.8001 1.29214 9.7073C1.1989 9.61451 1.12494 9.50434 1.07448 9.3831C1.02402 9.26185 0.998047 9.1319 0.998047 9.00067C0.998047 8.86943 1.02402 8.73949 1.07448 8.61824C1.12494 8.497 1.1989 8.38683 1.29214 8.29403L4.60214 5.01963L1.42214 1.73528C1.31985 1.64372 1.23764 1.53215 1.18065 1.40753C1.12367 1.28291 1.09313 1.14793 1.09095 1.01103C1.08877 0.874125 1.115 0.738248 1.16799 0.611895C1.22098 0.48554 1.2996 0.371429 1.39892 0.276695C1.49824 0.18196 1.61614 0.108641 1.74523 0.0613232C1.87433 0.0140047 2.01184 -0.00629328 2.14918 0.0016966C2.28652 0.00968649 2.42072 0.0457945 2.5434 0.107759C2.66607 0.169724 2.77458 0.256214 2.86214 0.361821L6.72214 4.34286C6.89845 4.52486 6.99856 4.76683 7.00214 5.01963Z" fill="white"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="order-schedule">
+            <div class="order-schedule__top">
+              <div class="order-schedule__top-left">
+                <div class="order-schedule__top-title">Буфетчица Буфетчица Буфетчица (01.05.1987)</div>
+                <a href="" class="order-schedule__top-all-diets">Все диеты</a>
+                <div class="order-schedule__top-date">01.05.2021</div>
+              </div>
+              <div class="order-schedule__top-right">
+                <div class="order-schedule__top-right-item">ID 0000000</div>
+                <div class="order-schedule__top-right-item">+7 (899) 999 99 99</div>
+              </div>
+            </div>
+            <div class="order-schedule__item">
+              <div class="order-schedule__item-cont">
+                <div class="order-schedule__item-tab-name">Завтрак</div>
+                <div class="order-schedule__item-rows">
+                  <div class="order-schedule__item-row">
+                    <div class="order-schedule__item-key">Круассан с сыром</div>
+                    <div class="order-schedule__item-val">4 шт.</div>
+                  </div>
+                  <div class="order-schedule__item-row">
+                    <div class="order-schedule__item-key">Фруктовый салат</div>
+                    <div class="order-schedule__item-val">20 шт.</div>
+                  </div>
+                  <div class="order-schedule__item-row">
+                    <div class="order-schedule__item-key">Топпинг</div>
+                    <div class="order-schedule__item-val">54 шт.</div>
+                  </div>
+                  <div class="order-schedule__item-row">
+                    <div class="order-schedule__item-key">Комплекс №3 (Стол №1)</div>
+                    <div class="order-schedule__item-val">10 шт.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-schedule__item-comment">
+                <input type="text" class="order-schedule__item-comment-input" placeholder="Комментарий">
+                <a href="#" class="order-schedule__item-comment-btn btn-1 --disabled">
+                  Сохранить
+                  <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.93762 6.64248C2.6635 6.41757 2.30629 6.29554 1.93766 6.30087C1.56903 6.3062 1.21625 6.43849 0.950066 6.67121C0.683887 6.90393 0.524005 7.21987 0.502491 7.55564C0.480977 7.89142 0.599422 8.22219 0.834067 8.48162L4.07705 11.5868C4.21283 11.7168 4.37598 11.8204 4.55672 11.8913C4.73745 11.9623 4.93205 11.9993 5.12883 12C5.32456 12.001 5.51853 11.9662 5.69921 11.8975C5.87989 11.8288 6.04359 11.7277 6.18061 11.6002L16.0849 2.27119C16.2191 2.14518 16.3249 1.99628 16.3961 1.83298C16.4673 1.66968 16.5026 1.49518 16.4999 1.31945C16.4971 1.14372 16.4565 0.970196 16.3803 0.80879C16.3041 0.647384 16.1938 0.501255 16.0556 0.378745C15.9175 0.256235 15.7543 0.159744 15.5753 0.094782C15.3963 0.0298196 15.205 -0.00234234 15.0124 0.000132731C14.8198 0.0026078 14.6296 0.0396712 14.4527 0.109207C14.2758 0.178743 14.1156 0.279389 13.9813 0.405399L5.14344 8.74816L2.93762 6.64248Z" fill="white"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="order-schedule__item">
+              <div class="order-schedule__item-cont">
+                <div class="order-schedule__item-tab-name">Обед</div>
+                <div class="order-schedule__item-rows">
+                  <div class="order-schedule__item-row">
+                    <div class="order-schedule__item-key">Круассан с сыром</div>
+                    <div class="order-schedule__item-val">4 шт.</div>
+                  </div>
+                  <div class="order-schedule__item-row">
+                    <div class="order-schedule__item-key">Фруктовый салат</div>
+                    <div class="order-schedule__item-val">20 шт.</div>
+                  </div>
+                  <div class="order-schedule__item-row">
+                    <div class="order-schedule__item-key">Топпинг</div>
+                    <div class="order-schedule__item-val">54 шт.</div>
+                  </div>
+                  <div class="order-schedule__item-row">
+                    <div class="order-schedule__item-key">Комплекс №3 (Стол №1)</div>
+                    <div class="order-schedule__item-val">10 шт.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-schedule__item-comment">
+                <input type="text" class="order-schedule__item-comment-input" placeholder="Комментарий">
+                <a href="#" class="order-schedule__item-comment-btn btn-1 --disabled">
+                  Сохранить
+                  <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.93762 6.64248C2.6635 6.41757 2.30629 6.29554 1.93766 6.30087C1.56903 6.3062 1.21625 6.43849 0.950066 6.67121C0.683887 6.90393 0.524005 7.21987 0.502491 7.55564C0.480977 7.89142 0.599422 8.22219 0.834067 8.48162L4.07705 11.5868C4.21283 11.7168 4.37598 11.8204 4.55672 11.8913C4.73745 11.9623 4.93205 11.9993 5.12883 12C5.32456 12.001 5.51853 11.9662 5.69921 11.8975C5.87989 11.8288 6.04359 11.7277 6.18061 11.6002L16.0849 2.27119C16.2191 2.14518 16.3249 1.99628 16.3961 1.83298C16.4673 1.66968 16.5026 1.49518 16.4999 1.31945C16.4971 1.14372 16.4565 0.970196 16.3803 0.80879C16.3041 0.647384 16.1938 0.501255 16.0556 0.378745C15.9175 0.256235 15.7543 0.159744 15.5753 0.094782C15.3963 0.0298196 15.205 -0.00234234 15.0124 0.000132731C14.8198 0.0026078 14.6296 0.0396712 14.4527 0.109207C14.2758 0.178743 14.1156 0.279389 13.9813 0.405399L5.14344 8.74816L2.93762 6.64248Z" fill="white"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="order-schedule__item">
+              <div class="order-schedule__item-cont">
+                <div class="order-schedule__item-tab-name">Полдник</div>
+                <div class="order-schedule__item-rows">
+                  <div class="order-schedule__item-row">
+                    <div class="order-schedule__item-key">Круассан с сыром</div>
+                    <div class="order-schedule__item-val">4 шт.</div>
+                  </div>
+                  <div class="order-schedule__item-row">
+                    <div class="order-schedule__item-key">Фруктовый салат</div>
+                    <div class="order-schedule__item-val">20 шт.</div>
+                  </div>
+                  <div class="order-schedule__item-row">
+                    <div class="order-schedule__item-key">Топпинг</div>
+                    <div class="order-schedule__item-val">54 шт.</div>
+                  </div>
+                  <div class="order-schedule__item-row">
+                    <div class="order-schedule__item-key">Комплекс №3 (Стол №1)</div>
+                    <div class="order-schedule__item-val">10 шт.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-schedule__item-comment">
+                <input type="text" class="order-schedule__item-comment-input" placeholder="Комментарий">
+                <a href="#" class="order-schedule__item-comment-btn btn-1 --disabled">
+                  Сохранить
+                  <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.93762 6.64248C2.6635 6.41757 2.30629 6.29554 1.93766 6.30087C1.56903 6.3062 1.21625 6.43849 0.950066 6.67121C0.683887 6.90393 0.524005 7.21987 0.502491 7.55564C0.480977 7.89142 0.599422 8.22219 0.834067 8.48162L4.07705 11.5868C4.21283 11.7168 4.37598 11.8204 4.55672 11.8913C4.73745 11.9623 4.93205 11.9993 5.12883 12C5.32456 12.001 5.51853 11.9662 5.69921 11.8975C5.87989 11.8288 6.04359 11.7277 6.18061 11.6002L16.0849 2.27119C16.2191 2.14518 16.3249 1.99628 16.3961 1.83298C16.4673 1.66968 16.5026 1.49518 16.4999 1.31945C16.4971 1.14372 16.4565 0.970196 16.3803 0.80879C16.3041 0.647384 16.1938 0.501255 16.0556 0.378745C15.9175 0.256235 15.7543 0.159744 15.5753 0.094782C15.3963 0.0298196 15.205 -0.00234234 15.0124 0.000132731C14.8198 0.0026078 14.6296 0.0396712 14.4527 0.109207C14.2758 0.178743 14.1156 0.279389 13.9813 0.405399L5.14344 8.74816L2.93762 6.64248Z" fill="white"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="order-schedule__item">
+              <div class="order-schedule__item-cont">
+                <div class="order-schedule__item-tab-name">Ужин</div>
+                <div class="order-schedule__item-rows">
+                  <div class="order-schedule__item-row">
+                    <div class="order-schedule__item-key">Круассан с сыром</div>
+                    <div class="order-schedule__item-val">4 шт.</div>
+                  </div>
+                  <div class="order-schedule__item-row">
+                    <div class="order-schedule__item-key">Фруктовый салат</div>
+                    <div class="order-schedule__item-val">20 шт.</div>
+                  </div>
+                  <div class="order-schedule__item-row">
+                    <div class="order-schedule__item-key">Топпинг</div>
+                    <div class="order-schedule__item-val">54 шт.</div>
+                  </div>
+                  <div class="order-schedule__item-row">
+                    <div class="order-schedule__item-key">Комплекс №3 (Стол №1)</div>
+                    <div class="order-schedule__item-val">10 шт.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="order-schedule__item-comment">
+                <input type="text" class="order-schedule__item-comment-input" placeholder="Комментарий">
+                <a href="#" class="order-schedule__item-comment-btn btn-1 --disabled">
+                  Сохранить
+                  <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.93762 6.64248C2.6635 6.41757 2.30629 6.29554 1.93766 6.30087C1.56903 6.3062 1.21625 6.43849 0.950066 6.67121C0.683887 6.90393 0.524005 7.21987 0.502491 7.55564C0.480977 7.89142 0.599422 8.22219 0.834067 8.48162L4.07705 11.5868C4.21283 11.7168 4.37598 11.8204 4.55672 11.8913C4.73745 11.9623 4.93205 11.9993 5.12883 12C5.32456 12.001 5.51853 11.9662 5.69921 11.8975C5.87989 11.8288 6.04359 11.7277 6.18061 11.6002L16.0849 2.27119C16.2191 2.14518 16.3249 1.99628 16.3961 1.83298C16.4673 1.66968 16.5026 1.49518 16.4999 1.31945C16.4971 1.14372 16.4565 0.970196 16.3803 0.80879C16.3041 0.647384 16.1938 0.501255 16.0556 0.378745C15.9175 0.256235 15.7543 0.159744 15.5753 0.094782C15.3963 0.0298196 15.205 -0.00234234 15.0124 0.000132731C14.8198 0.0026078 14.6296 0.0396712 14.4527 0.109207C14.2758 0.178743 14.1156 0.279389 13.9813 0.405399L5.14344 8.74816L2.93762 6.64248Z" fill="white"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="order-schedule__footer">
+              <a href="#" class="order-schedule__footer-btn btn-2">Предыдущий день</a>
+              <div class="order-schedule__footer-page">1/7</div>
+              <a href="#" class="order-schedule__footer-btn btn-1">Следующий день</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__outer-wrapper">
+          <div class="container">
+            <div class="footer__wrapper">
+              <a href="#" class="footer__logo">
+                <img src="assets/dist/images/header__logo.svg" />
+              </a>
+              <div class="footer__call">
+                <div class="footer__call-caption">Call-центр:</div>
+                <div class="footer__call-number">+7 495 933-66-55</div>
+              </div>
+              <div class="footer__copy-n-agreement">
+                <div class="footer__copy">© 2020 Европейский Медицинский Центр</div>
+                <a href="#" class="footer__agreement">Пользовательское соглашение</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="assets/dist/js/app.js"></script>
+  </body>
+</html>

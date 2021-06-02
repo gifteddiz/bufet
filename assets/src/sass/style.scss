@@ -2,6 +2,8 @@
 @import "variables";
 @import "helpers";
 
+@import "temp/datepicker.scss";
+
 @import "header";
 @import "orders";
 @import "order";
@@ -9,3 +11,13 @@
 @import "sign-in";
 @import "patients";
 @import "patient";
+@import "patients-filter";
+@import "datepicker";
+@import "add-order";
+@import "dishes";
+@import "add-order-added";
+@import "complex";
+@import "add-order-checkpoint";
+@import "order-list";
+@import "order-schedule";
+@import "order-list-popup";

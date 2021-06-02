@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/dist/css/style.css" />
+    <title>Буфетчица</title>
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__wrapper">
+            <a href="#" class="header__logo">
+              <img src="assets/dist/images/header__logo.png" alt="EMC - Group Of Companies European Medical Center" />
+            </a>
+            <a href="#" class="header__name">Константин Константинович</a>
+            <a href="#" class="header__exit">
+              <img src="assets/dist/images/header__logout.svg" alt="Выйти" />
+            </a>
+          </div>
+        </div>
+      </header>
+      <div class="add-order">
+        <div class="container">
+          <div class="add-order__top">
+            <div class="add-order__title">Добавить заказ</div>
+            <div class="add-order__table">
+              <div class="add-order__table-caption">Выберите стол:</div>
+              <select class="add-order__table-select">
+                <option>Не выбрано</option>
+              </select>
+            </div>
+          </div>
+          <div class="add-order__complex-added">Комплекс добавлен</div>
+          <div class="add-order__type">
+            <div class="add-order__type-item --active">Наборы</div>
+            <div class="add-order__type-item">Блюда</div>
+          </div>
+          <div class="add-order__filter">
+            <div class="add-order__filter-fieldset --name">
+              <input type="text" placeholder="Введите название">
+            </div>
+            <div class="add-order__filter-fieldset --qty">
+              <div class="add-order__filter-label">Введите количество</div>
+              <input type="text" placeholder="0 шт.">
+            </div>
+            <div class="add-order__filter-fieldset">
+              <button class="add-order__filter-btn btn-1">
+                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.21947 4.99982C2.03181 4.83105 1.78729 4.73949 1.53494 4.74349C1.28259 4.74748 1.04109 4.84675 0.858876 5.02137C0.676662 5.19599 0.567214 5.43306 0.552487 5.68501C0.537759 5.93695 0.618841 6.18515 0.779469 6.37982L2.99947 8.70982C3.09242 8.80732 3.2041 8.88504 3.32783 8.93831C3.45155 8.99158 3.58476 9.0193 3.71947 9.01982C3.85346 9.0206 3.98624 8.99445 4.10992 8.94291C4.23361 8.89137 4.34568 8.81551 4.43947 8.71982L11.2195 1.71982C11.3114 1.62526 11.3838 1.51353 11.4325 1.391C11.4813 1.26847 11.5054 1.13753 11.5036 1.00567C11.5017 0.873815 11.4739 0.743613 11.4217 0.622501C11.3695 0.50139 11.294 0.391742 11.1995 0.299817C11.1049 0.207891 10.9932 0.135489 10.8707 0.0867447C10.7481 0.0380002 10.6172 0.0138674 10.4853 0.0157246C10.3535 0.0175818 10.2233 0.0453923 10.1022 0.0975684C9.98104 0.149745 9.8714 0.225265 9.77947 0.319817L3.72947 6.57982L2.21947 4.99982Z" fill="#FBF8F3"/>
+                </svg>
+                Выбрать
+              </button>
+            </div>
+          </div>
+          <div class="complex">
+            <div class="complex__tabs">
+              <div class="complex__tab-item">Завтрак</div>
+              <div class="complex__tab-item">Обед</div>
+              <div class="complex__tab-item">Полдник</div>
+              <div class="complex__tab-item">Ужин</div>
+            </div>
+          </div>
+          <div class="add-order__empty">
+            <div class="add-order__empty-title">Выберите стол</div>
+            <div class="add-order__empty-subtitle">Список комплексов появится после выбора диеты</div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__outer-wrapper">
+          <div class="container">
+            <div class="footer__wrapper">
+              <a href="#" class="footer__logo">
+                <img src="assets/dist/images/header__logo.svg" />
+              </a>
+              <div class="footer__call">
+                <div class="footer__call-caption">Call-центр:</div>
+                <div class="footer__call-number">+7 495 933-66-55</div>
+              </div>
+              <div class="footer__copy-n-agreement">
+                <div class="footer__copy">© 2020 Европейский Медицинский Центр</div>
+                <a href="#" class="footer__agreement">Пользовательское соглашение</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="assets/dist/js/app.js"></script>
+  </body>
+</html>

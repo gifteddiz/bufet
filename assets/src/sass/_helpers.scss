@@ -40,6 +40,7 @@
     font-family: $base-font;
     font-weight: normal;
     box-sizing: border-box;
+    outline: none;
   }
 }
 
@@ -75,6 +76,12 @@ a{
   &.--disabled{
     opacity: 0.4;
     pointer-events: none;
+  }
+  &.--red{
+    background-color: #DB524E;
+    &:hover{
+      background-color: #CA3632;
+    }
   }
 }
 .btn-2{

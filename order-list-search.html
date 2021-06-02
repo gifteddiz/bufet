@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/dist/css/style.css" />
+    <title>Буфетчица</title>
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__wrapper">
+            <a href="#" class="header__logo">
+              <img src="assets/dist/images/header__logo.png" alt="EMC - Group Of Companies European Medical Center" />
+            </a>
+            <a href="#" class="header__name">Константин Константинович</a>
+            <a href="#" class="header__exit">
+              <img src="assets/dist/images/header__logout.svg" alt="Выйти" />
+            </a>
+          </div>
+        </div>
+      </header>
+      <div class="order-list">
+        <div class="container">
+          <div class="order-list__title">Список заказанного</div>
+          <div class="order-list__dish-changed">Пациент сделал замену блюда</div>
+          <div class="order-list__filter">
+            <div class="order-list__filter-fieldset --name">
+              <div class="order-list__filter-name">
+                <input type="text" placeholder="Введите ФИО пациента, ID...">
+                <div class="order-list__filter-name-dropdown">
+                  <div class="order-list__filter-name-item">Буфетчица Буфетчица Буфетчица (01.05.1987)</div>
+                  <div class="order-list__filter-name-item">Буфетчица Буфетчик Константинович (01.01.1977)</div>
+                  <div class="order-list__filter-name-item">Буфетчица Буфетчица Буфетчица (01.05.1987)</div>
+                  <div class="order-list__filter-name-item">Буфетчица Буфетчик Константинович (01.01.1956)</div>
+                  <div class="order-list__filter-name-item">Буфетчица Буфетчица Буфетчица (01.05.1996)</div>
+                </div>
+              </div>
+            </div>
+            <div class="order-list__filter-fieldset --small">
+              <div class="order-list__filter-label">С какого числа</div>
+              <div class="order-list__filter-date">
+                <input type="text" value="01.05.2021">
+              </div>
+            </div>
+            <div class="order-list__filter-fieldset --small">
+              <div class="order-list__filter-label">По какое</div>
+              <div class="order-list__filter-date">
+                <input type="text" value="07.05.2021">
+                <div class="order-list__filter-date-datepicker">
+                  <div class="mx-datepicker-main mx-datepicker-popup">
+                    <div class="mx-datepicker-content">
+                      <div class="mx-datepicker-body">
+                        <div class="mx-calendar mx-calendar-panel-date">
+                          <div class="mx-calendar-header">
+                            <button type="button" class="mx-btn mx-btn-text mx-btn-icon-left"><i
+                                class="mx-icon-left"></i></button> 
+                            <button type="button" class="mx-btn mx-btn-text mx-btn-icon-right"><i
+                                class="mx-icon-right"></i></button> <span class="mx-calendar-header-label"><button type="button"
+                                class="mx-btn mx-btn-text mx-btn-current-month">
+                                авг.
+                              </button><button type="button" class="mx-btn mx-btn-text mx-btn-current-year">
+                                1999
+                              </button></span></div>
+                          <div class="mx-calendar-content">
+                            <table class="mx-table mx-table-date">
+                              <thead>
+                                <tr>
+                                  <!---->
+                                  <th>пн</th>
+                                  <th>вт</th>
+                                  <th>ср</th>
+                                  <th>чт</th>
+                                  <th>пт</th>
+                                  <th>сб</th>
+                                  <th>вс</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="mx-date-row">
+                                  <!---->
+                                  <td data-row-col="0,0" title="1999-07-26" class="cell not-current-month">
+                                    <div>26</div>
+                                  </td>
+                                  <td data-row-col="0,1" title="1999-07-27" class="cell not-current-month">
+                                    <div>27</div>
+                                  </td>
+                                  <td data-row-col="0,2" title="1999-07-28" class="cell not-current-month">
+                                    <div>28</div>
+                                  </td>
+                                  <td data-row-col="0,3" title="1999-07-29" class="cell not-current-month">
+                                    <div>29</div>
+                                  </td>
+                                  <td data-row-col="0,4" title="1999-07-30" class="cell not-current-month">
+                                    <div>30</div>
+                                  </td>
+                                  <td data-row-col="0,5" title="1999-07-31" class="cell not-current-month">
+                                    <div>31</div>
+                                  </td>
+                                  <td data-row-col="0,6" title="1999-08-01" class="cell">
+                                    <div>1</div>
+                                  </td>
+                                </tr>
+                                <tr class="mx-date-row">
+                                  <!---->
+                                  <td data-row-col="1,0" title="1999-08-02" class="cell">
+                                    <div>2</div>
+                                  </td>
+                                  <td data-row-col="1,1" title="1999-08-03" class="cell">
+                                    <div>3</div>
+                                  </td>
+                                  <td data-row-col="1,2" title="1999-08-04" class="cell">
+                                    <div>4</div>
+                                  </td>
+                                  <td data-row-col="1,3" title="1999-08-05" class="cell">
+                                    <div>5</div>
+                                  </td>
+                                  <td data-row-col="1,4" title="1999-08-06" class="cell">
+                                    <div>6</div>
+                                  </td>
+                                  <td data-row-col="1,5" title="1999-08-07" class="cell">
+                                    <div>7</div>
+                                  </td>
+                                  <td data-row-col="1,6" title="1999-08-08" class="cell">
+                                    <div>8</div>
+                                  </td>
+                                </tr>
+                                <tr class="mx-date-row">
+                                  <!---->
+                                  <td data-row-col="2,0" title="1999-08-09" class="cell">
+                                    <div>9</div>
+                                  </td>
+                                  <td data-row-col="2,1" title="1999-08-10" class="cell">
+                                    <div>10</div>
+                                  </td>
+                                  <td data-row-col="2,2" title="1999-08-11" class="cell">
+                                    <div>11</div>
+                                  </td>
+                                  <td data-row-col="2,3" title="1999-08-12" class="cell">
+                                    <div>12</div>
+                                  </td>
+                                  <td data-row-col="2,4" title="1999-08-13" class="cell">
+                                    <div>13</div>
+                                  </td>
+                                  <td data-row-col="2,5" title="1999-08-14" class="cell">
+                                    <div>14</div>
+                                  </td>
+                                  <td data-row-col="2,6" title="1999-08-15" class="cell">
+                                    <div>15</div>
+                                  </td>
+                                </tr>
+                                <tr class="mx-date-row">
+                                  <!---->
+                                  <td data-row-col="3,0" title="1999-08-16" class="cell">
+                                    <div>16</div>
+                                  </td>
+                                  <td data-row-col="3,1" title="1999-08-17" class="cell">
+                                    <div>17</div>
+                                  </td>
+                                  <td data-row-col="3,2" title="1999-08-18" class="cell">
+                                    <div>18</div>
+                                  </td>
+                                  <td data-row-col="3,3" title="1999-08-19" class="cell">
+                                    <div>19</div>
+                                  </td>
+                                  <td data-row-col="3,4" title="1999-08-20" class="cell">
+                                    <div>20</div>
+                                  </td>
+                                  <td data-row-col="3,5" title="1999-08-21" class="cell">
+                                    <div>21</div>
+                                  </td>
+                                  <td data-row-col="3,6" title="1999-08-22" class="cell">
+                                    <div>22</div>
+                                  </td>
+                                </tr>
+                                <tr class="mx-date-row">
+                                  <!---->
+                                  <td data-row-col="4,0" title="1999-08-23" class="cell">
+                                    <div>23</div>
+                                  </td>
+                                  <td data-row-col="4,1" title="1999-08-24" class="cell">
+                                    <div>24</div>
+                                  </td>
+                                  <td data-row-col="4,2" title="1999-08-25" class="cell">
+                                    <div>25</div>
+                                  </td>
+                                  <td data-row-col="4,3" title="1999-08-26" class="cell">
+                                    <div>26</div>
+                                  </td>
+                                  <td data-row-col="4,4" title="1999-08-27" class="cell">
+                                    <div>27</div>
+                                  </td>
+                                  <td data-row-col="4,5" title="1999-08-28" class="cell">
+                                    <div>28</div>
+                                  </td>
+                                  <td data-row-col="4,6" title="1999-08-29" class="cell">
+                                    <div>29</div>
+                                  </td>
+                                </tr>
+                                <tr class="mx-date-row">
+                                  <!---->
+                                  <td data-row-col="5,0" title="1999-08-30" class="cell">
+                                    <div>30</div>
+                                  </td>
+                                  <td data-row-col="5,1" title="1999-08-31" class="cell">
+                                    <div>31</div>
+                                  </td>
+                                  <td data-row-col="5,2" title="1999-09-01" class="cell not-current-month">
+                                    <div>1</div>
+                                  </td>
+                                  <td data-row-col="5,3" title="1999-09-02" class="cell not-current-month">
+                                    <div>2</div>
+                                  </td>
+                                  <td data-row-col="5,4" title="1999-09-03" class="cell not-current-month">
+                                    <div>3</div>
+                                  </td>
+                                  <td data-row-col="5,5" title="1999-09-04" class="cell not-current-month">
+                                    <div>4</div>
+                                  </td>
+                                  <td data-row-col="5,6" title="1999-09-05" class="cell not-current-month">
+                                    <div>5</div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-list__filter-fieldset --small">
+              <div class="order-list__filter-label">Приём пищи</div>
+              <select class="order-list__filter-select">
+                <option>Все</option>
+              </select>
+            </div>
+            <div class="order-list__filter-fieldset --btn">
+              <a href="#" class="order-list__filter-btn btn-1">
+                Найти
+                <svg width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.00214 5.01963C7.0029 5.15062 6.97767 5.28046 6.92791 5.40172C6.87814 5.52298 6.80482 5.63327 6.71214 5.72627L2.71214 9.7073C2.6189 9.8001 2.50821 9.87371 2.38639 9.92393C2.26457 9.97415 2.134 10 2.00214 10C1.87028 10 1.73971 9.97415 1.61789 9.92393C1.49607 9.87371 1.38538 9.8001 1.29214 9.7073C1.1989 9.61451 1.12494 9.50434 1.07448 9.3831C1.02402 9.26185 0.998047 9.1319 0.998047 9.00067C0.998047 8.86943 1.02402 8.73949 1.07448 8.61824C1.12494 8.497 1.1989 8.38683 1.29214 8.29403L4.60214 5.01963L1.42214 1.73528C1.31985 1.64372 1.23764 1.53215 1.18065 1.40753C1.12367 1.28291 1.09313 1.14793 1.09095 1.01103C1.08877 0.874125 1.115 0.738248 1.16799 0.611895C1.22098 0.48554 1.2996 0.371429 1.39892 0.276695C1.49824 0.18196 1.61614 0.108641 1.74523 0.0613232C1.87433 0.0140047 2.01184 -0.00629328 2.14918 0.0016966C2.28652 0.00968649 2.42072 0.0457945 2.5434 0.107759C2.66607 0.169724 2.77458 0.256214 2.86214 0.361821L6.72214 4.34286C6.89845 4.52486 6.99856 4.76683 7.00214 5.01963Z" fill="white"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="order-list__empty">
+            <div class="order-list__empty-title">Ничего не выбрано</div>
+            <div class="order-list__empty-subtitle">Воспользуйтесь поиском, чтобы найти всё, что нужно. </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__outer-wrapper">
+          <div class="container">
+            <div class="footer__wrapper">
+              <a href="#" class="footer__logo">
+                <img src="assets/dist/images/header__logo.svg" />
+              </a>
+              <div class="footer__call">
+                <div class="footer__call-caption">Call-центр:</div>
+                <div class="footer__call-number">+7 495 933-66-55</div>
+              </div>
+              <div class="footer__copy-n-agreement">
+                <div class="footer__copy">© 2020 Европейский Медицинский Центр</div>
+                <a href="#" class="footer__agreement">Пользовательское соглашение</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="assets/dist/js/app.js"></script>
+  </body>
+</html>

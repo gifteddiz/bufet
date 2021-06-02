@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/dist/css/style.css" />
+    <title>Буфетчица</title>
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__wrapper">
+            <a href="#" class="header__logo">
+              <img src="assets/dist/images/header__logo.png" alt="EMC - Group Of Companies European Medical Center" />
+            </a>
+            <a href="#" class="header__name">Константин Константинович</a>
+            <a href="#" class="header__exit">
+              <img src="assets/dist/images/header__logout.svg" alt="Выйти" />
+            </a>
+          </div>
+        </div>
+      </header>
+      <div class="add-order">
+        <div class="container">
+          <div class="add-order__top">
+            <div class="add-order__title">Добавить заказ</div>
+          </div>
+          <div class="add-order__type">
+            <div class="add-order__type-item">Наборы</div>
+            <div class="add-order__type-item --active">Блюда</div>
+          </div>
+          <div class="add-order__filter">
+            <div class="add-order__filter-fieldset --name --filled">
+              <input type="text" placeholder="Введите название" value="Гречка с овощами">
+            </div>
+            <div class="add-order__filter-fieldset --qty --filled">
+              <div class="add-order__filter-label">Введите количество</div>
+              <input type="text" placeholder="0 шт." value="7 шт.">
+            </div>
+            <div class="add-order__filter-fieldset">
+              <button class="add-order__filter-btn btn-1">
+                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.21947 4.99982C2.03181 4.83105 1.78729 4.73949 1.53494 4.74349C1.28259 4.74748 1.04109 4.84675 0.858876 5.02137C0.676662 5.19599 0.567214 5.43306 0.552487 5.68501C0.537759 5.93695 0.618841 6.18515 0.779469 6.37982L2.99947 8.70982C3.09242 8.80732 3.2041 8.88504 3.32783 8.93831C3.45155 8.99158 3.58476 9.0193 3.71947 9.01982C3.85346 9.0206 3.98624 8.99445 4.10992 8.94291C4.23361 8.89137 4.34568 8.81551 4.43947 8.71982L11.2195 1.71982C11.3114 1.62526 11.3838 1.51353 11.4325 1.391C11.4813 1.26847 11.5054 1.13753 11.5036 1.00567C11.5017 0.873815 11.4739 0.743613 11.4217 0.622501C11.3695 0.50139 11.294 0.391742 11.1995 0.299817C11.1049 0.207891 10.9932 0.135489 10.8707 0.0867447C10.7481 0.0380002 10.6172 0.0138674 10.4853 0.0157246C10.3535 0.0175818 10.2233 0.0453923 10.1022 0.0975684C9.98104 0.149745 9.8714 0.225265 9.77947 0.319817L3.72947 6.57982L2.21947 4.99982Z" fill="#FBF8F3"/>
+                </svg>
+                Выбрать
+              </button>
+            </div>
+          </div>
+          <div class="dishes">
+            <div class="dishes__table">
+              <div class="dishes__table-row">
+                <div class="dishes__table-cell --header">Список выбранных блюд</div>
+                <div class="dishes__table-cell --header">Количество</div>
+                <div class="dishes__table-cell --header">Удалить</div>
+              </div>
+              <div class="dishes__table-row">
+                <div class="dishes__table-cell">
+                  <a href="#" class="dishes__table-name --active">Фруктовый салат</a>
+                </div>
+                <div class="dishes__table-cell">
+                  <div class="dishes__table-qty">
+                    <a href="#" class="dishes__table-qty-btn">
+                      <img src="assets/dist/images/minus.svg">
+                    </a>
+                    <div class="dishes__table-qty-val">8</div>
+                    <a href="#" class="dishes__table-qty-btn">
+                      <img src="assets/dist/images/plus.svg">
+                    </a>
+                  </div>
+                </div>
+                <div class="dishes__table-cell">
+                  <a href="#" class="dishes__table-remove">
+                    <img src="assets/dist/images/cross.svg">
+                  </a>
+                </div>
+              </div>
+              <div class="dishes__table-full">
+                <div class="dishes__table-full-text">
+                  <p><strong>Состав:</strong> апельсины, яблоки, банан (мякоть), сироп малины, натуральный йогурт</p>
+                  <p><strong>Вес:</strong> 150 гр</p>
+                  <p><strong>Калорийность:</strong> 250 Ккал/100 гр; Белки 20, жиры 15, углеводы 25</p>
+                </div>
+                <div class="dishes__table-full-allergen">Аллергены: Цитрусовые</div>
+              </div>
+              <div class="dishes__table-row">
+                <div class="dishes__table-cell">
+                  <a href="#" class="dishes__table-name">Борщ</a>
+                </div>
+                <div class="dishes__table-cell">
+                  <div class="dishes__table-qty">
+                    <a href="#" class="dishes__table-qty-btn">
+                      <img src="assets/dist/images/minus.svg">
+                    </a>
+                    <div class="dishes__table-qty-val">8</div>
+                    <a href="#" class="dishes__table-qty-btn">
+                      <img src="assets/dist/images/plus.svg">
+                    </a>
+                  </div>
+                </div>
+                <div class="dishes__table-cell">
+                  <a href="#" class="dishes__table-remove">
+                    <img src="assets/dist/images/cross.svg">
+                  </a>
+                </div>
+              </div>
+              <div class="dishes__table-row">
+                <div class="dishes__table-cell">
+                  <a href="#" class="dishes__table-name">Мясо с овощами по-французски</a>
+                </div>
+                <div class="dishes__table-cell">
+                  <div class="dishes__table-qty">
+                    <a href="#" class="dishes__table-qty-btn">
+                      <img src="assets/dist/images/minus.svg">
+                    </a>
+                    <div class="dishes__table-qty-val">8</div>
+                    <a href="#" class="dishes__table-qty-btn">
+                      <img src="assets/dist/images/plus.svg">
+                    </a>
+                  </div>
+                </div>
+                <div class="dishes__table-cell">
+                  <a href="#" class="dishes__table-remove">
+                    <img src="assets/dist/images/cross.svg">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="dishes__btns">
+              <a href="#" class="dishes__btn btn-2">
+                <span>Удалить всё</span>
+                <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.251402 8.03465C-0.0838005 8.36985 -0.0838007 8.91332 0.251402 9.24852C0.586604 9.58372 1.13007 9.58372 1.46528 9.24852L4.50003 6.21377L7.53485 9.24858C7.87005 9.58379 8.41352 9.58379 8.74872 9.24858C9.08393 8.91338 9.08393 8.36991 8.74873 8.03471L5.71391 4.99989L8.74853 1.96528C9.08373 1.63007 9.08373 1.0866 8.74853 0.751402C8.41333 0.4162 7.86986 0.416199 7.53465 0.751401L4.50003 3.78602L1.46547 0.751466C1.13027 0.416264 0.586801 0.416264 0.251598 0.751466C-0.0836043 1.08667 -0.0836046 1.63014 0.251598 1.96534L3.28616 4.99989L0.251402 8.03465Z" fill="#2A73BD"/>
+                </svg>
+              </a>
+              <a href="#" class="dishes__btn btn-1">
+                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.71947 5.00006C1.53181 4.8313 1.28729 4.73973 1.03494 4.74373C0.782594 4.74773 0.541091 4.84699 0.358876 5.02162C0.176662 5.19624 0.0672143 5.4333 0.0524866 5.68525C0.037759 5.9372 0.118841 6.1854 0.279469 6.38006L2.49947 8.71006C2.59242 8.80756 2.7041 8.88528 2.82783 8.93855C2.95155 8.99182 3.08476 9.01955 3.21947 9.02006C3.35346 9.02084 3.48624 8.99469 3.60992 8.94315C3.73361 8.89162 3.84568 8.81575 3.93947 8.72006L10.7195 1.72006C10.8114 1.62551 10.8838 1.51378 10.9325 1.39124C10.9813 1.26871 11.0054 1.13778 11.0036 1.00592C11.0017 0.874059 10.9739 0.743857 10.9217 0.622745C10.8695 0.501634 10.794 0.391986 10.6995 0.300061C10.6049 0.208135 10.4932 0.135733 10.3707 0.0869889C10.2481 0.0382443 10.1172 0.0141116 9.98533 0.0159687C9.85347 0.0178259 9.72327 0.0456365 9.60215 0.0978126C9.48104 0.149989 9.3714 0.225509 9.27947 0.320061L3.22947 6.58006L1.71947 5.00006Z" fill="#FBF8F3"/>
+                </svg>
+                <span>Отправить</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__outer-wrapper">
+          <div class="container">
+            <div class="footer__wrapper">
+              <a href="#" class="footer__logo">
+                <img src="assets/dist/images/header__logo.svg" />
+              </a>
+              <div class="footer__call">
+                <div class="footer__call-caption">Call-центр:</div>
+                <div class="footer__call-number">+7 495 933-66-55</div>
+              </div>
+              <div class="footer__copy-n-agreement">
+                <div class="footer__copy">© 2020 Европейский Медицинский Центр</div>
+                <a href="#" class="footer__agreement">Пользовательское соглашение</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="assets/dist/js/app.js"></script>
+  </body>
+</html>

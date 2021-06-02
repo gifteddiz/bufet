@@ -1,0 +1,136 @@
+.add-order-checkpoint{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(192,186,175,.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-order-checkpoint__content{
+  width: 670px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 25px rgba(60, 48, 29, 0.1);
+  background-color: #fff;
+}
+.add-order-checkpoint__top{
+  position: relative;
+  padding: 30px 20px 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    background-image: url('../images/dash-line.svg');
+    background-repeat: repeat-x;
+  }
+}
+.add-order-checkpoint__title{
+  font-size: 18px;
+  font-family: $roboto;
+  color: #484C51;
+}
+.add-order-checkpoint__close{
+  width: 26px;
+  svg{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+.add-order-checkpoint__item{
+  position: relative;
+  padding: 30px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    background-image: url('../images/dash-line.svg');
+    background-repeat: repeat-x;
+  }
+  &.--disabled{
+    .add-order-checkpoint__item-cont{
+      opacity: 0.4;
+    }
+  }
+}
+.add-order-checkpoint__item-cont{
+
+}
+.add-order-checkpoint__item-title{
+  font-size: 24px;
+  font-weight: bold;
+  color: #222325;
+  margin-bottom: 10px;
+
+}
+.add-order-checkpoint__item-text{
+  font-style: italic;
+  color: #483C51;
+}
+.add-order-checkpoint__item-qty{
+  display: inline-flex;
+}
+.add-order-checkpoint__item-qty-btn{
+  width: 35px;
+  height: 35px;
+  background-color: #EBE5DB;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.--disabled{
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+.add-order-checkpoint__item-qty-val{
+  width: 65px;
+  font-size: 20px;
+  color: #222325;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-order-checkpoint__footer{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 40px 30px;
+  align-items: center;
+}
+.add-order-checkpoint__clear{
+  font-size: 16px;
+  color: #484C51;
+  font-family: $roboto;
+  display: flex;
+  text-decoration: none;
+  svg{
+    margin-left: 5px;
+  }
+}
+.add-order-checkpoint__btns{
+  display: flex;
+}
+.add-order-checkpoint__btn{
+  width: 150px;
+  height: 44px;
+  font-size: 16px;
+  margin-left: 10px;
+}

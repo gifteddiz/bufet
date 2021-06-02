@@ -1,0 +1,87 @@
+.patients-filter{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(192,186,175,.7);
+}
+.patients-filter__content{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 570px;
+  border-radius: 0 15px 15px 0;
+  background-color: #fff;
+  box-shadow: 0px 10px 25px rgba(60, 48, 29, 0.1);
+  padding: 60px 70px 90px 40px;
+}
+.patients-filter__close{
+  font-size: 18px;
+  color: #2A73BD;
+  margin-bottom: 50px;
+  display: block;
+  text-decoration: none;
+  svg{
+    display: inline-block;
+    width: 12px;
+    height: auto;
+    margin-right: 8px;
+  }
+}
+.patients-filter__title{
+  font-size: 29px;
+  color: #222325;
+  margin-bottom: 28px;
+}
+.patients-filter__fieldset{
+  &+.patients-filter__fieldset{
+    margin-top: 25px;
+  }
+}
+.patients-filter__fieldset-label{
+  font-size: 14px;
+  color: #484C51;
+  font-family: $roboto;
+  margin-bottom: 3px;
+  display: block;
+}
+.patients-filter__fieldset-select{
+  appearance: none;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #fff;
+  border: 1px solid #C4C4C4;
+  padding: 0 13px;
+  font-size: 16px;
+  font-family: $roboto;
+  color: rgba(34,35,37,.4);
+  background-image: url('../images/arrow-down-gray.svg');
+  background-repeat: no-repeat;
+  background-position: right 17px center;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.02), 0px 4px 16px rgba(51, 51, 51, 0.04);
+  &.--active{
+    border-color: #484C51;
+    color: #222325;
+  }
+}
+.patients-filter__btn{
+  width: 186px;
+  height: 44px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.patients-filter__datepicker{
+  position: absolute;
+  left: 570px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
