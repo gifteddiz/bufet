@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/dist/css/style.css" />
-    <title>Буфетчица</title>
-  </head>
 
-  <body>
-    <div class="page-wrapper">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/dist/css/style.css?124" />
+  <title>Буфетчица</title>
+</head>
+
+<body>
+  <div class="page-wrapper" data-sticky-container>
+    <div class="js-sticky" data-sticky-wrap data-sticky-class="is-sticky">
       <header class="header">
         <div class="container">
           <div class="header__wrapper">
@@ -50,7 +52,9 @@
             <div class="add-order__filter-fieldset">
               <button class="add-order__filter-btn btn-1">
                 <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2.21947 4.99982C2.03181 4.83105 1.78729 4.73949 1.53494 4.74349C1.28259 4.74748 1.04109 4.84675 0.858876 5.02137C0.676662 5.19599 0.567214 5.43306 0.552487 5.68501C0.537759 5.93695 0.618841 6.18515 0.779469 6.37982L2.99947 8.70982C3.09242 8.80732 3.2041 8.88504 3.32783 8.93831C3.45155 8.99158 3.58476 9.0193 3.71947 9.01982C3.85346 9.0206 3.98624 8.99445 4.10992 8.94291C4.23361 8.89137 4.34568 8.81551 4.43947 8.71982L11.2195 1.71982C11.3114 1.62526 11.3838 1.51353 11.4325 1.391C11.4813 1.26847 11.5054 1.13753 11.5036 1.00567C11.5017 0.873815 11.4739 0.743613 11.4217 0.622501C11.3695 0.50139 11.294 0.391742 11.1995 0.299817C11.1049 0.207891 10.9932 0.135489 10.8707 0.0867447C10.7481 0.0380002 10.6172 0.0138674 10.4853 0.0157246C10.3535 0.0175818 10.2233 0.0453923 10.1022 0.0975684C9.98104 0.149745 9.8714 0.225265 9.77947 0.319817L3.72947 6.57982L2.21947 4.99982Z" fill="#FBF8F3"/>
+                  <path
+                    d="M2.21947 4.99982C2.03181 4.83105 1.78729 4.73949 1.53494 4.74349C1.28259 4.74748 1.04109 4.84675 0.858876 5.02137C0.676662 5.19599 0.567214 5.43306 0.552487 5.68501C0.537759 5.93695 0.618841 6.18515 0.779469 6.37982L2.99947 8.70982C3.09242 8.80732 3.2041 8.88504 3.32783 8.93831C3.45155 8.99158 3.58476 9.0193 3.71947 9.01982C3.85346 9.0206 3.98624 8.99445 4.10992 8.94291C4.23361 8.89137 4.34568 8.81551 4.43947 8.71982L11.2195 1.71982C11.3114 1.62526 11.3838 1.51353 11.4325 1.391C11.4813 1.26847 11.5054 1.13753 11.5036 1.00567C11.5017 0.873815 11.4739 0.743613 11.4217 0.622501C11.3695 0.50139 11.294 0.391742 11.1995 0.299817C11.1049 0.207891 10.9932 0.135489 10.8707 0.0867447C10.7481 0.0380002 10.6172 0.0138674 10.4853 0.0157246C10.3535 0.0175818 10.2233 0.0453923 10.1022 0.0975684C9.98104 0.149745 9.8714 0.225265 9.77947 0.319817L3.72947 6.57982L2.21947 4.99982Z"
+                    fill="#FBF8F3" />
                 </svg>
                 Выбрать
               </button>
@@ -63,74 +67,84 @@
               <div class="complex__tab-item">Полдник</div>
               <div class="complex__tab-item">Ужин</div>
             </div>
-            <div class="complex__item">
-              <div class="complex__item-top">
-                <div class="complex__item-title">Комплекс №1 (Стол №1)</div>
-                <div class="complex__item-qty">
-                  <div class="complex__item-qty-caption">Введите количество:</div>
-                  <input type="text" class="complex__item-qty-input" value="0">
-                </div>
-              </div>
-              <div class="complex__item-content">
-                Круассан с сыром/Топпинг/Фруктовый салат/<br>
-                Апельсиновый сок
-              </div>
-            </div>
-            <div class="complex__item">
-              <div class="complex__item-top">
-                <div class="complex__item-title">Комплекс №2 (Стол №1)</div>
-                <div class="complex__item-qty">
-                  <div class="complex__item-qty-caption">Введите количество:</div>
-                  <input type="text" class="complex__item-qty-input" value="0">
-                </div>
-              </div>
-              <div class="complex__item-content">
-                Круассан с сыром/Топпинг/Фруктовый салат/<br>
-                Апельсиновый сок
-              </div>
-            </div>
-            <div class="complex__item">
-              <div class="complex__item-top">
-                <div class="complex__item-title">Комплекс №3 (Стол №1)</div>
-                <div class="complex__item-qty">
-                  <div class="complex__item-qty-caption">Введите количество:</div>
-                  <input type="text" class="complex__item-qty-input" value="0">
-                </div>
-              </div>
-              <div class="complex__item-content">
-                Круассан с сыром/Топпинг/Фруктовый салат/<br>
-                Апельсиновый сок
-              </div>
-            </div>
-            <a href="#" class="complex__confirm btn-1 --disabled">
-              <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.93762 6.64248C2.6635 6.41757 2.30629 6.29554 1.93766 6.30087C1.56903 6.3062 1.21625 6.43849 0.950066 6.67121C0.683887 6.90393 0.524005 7.21987 0.502491 7.55564C0.480977 7.89142 0.599422 8.22219 0.834067 8.48162L4.07705 11.5868C4.21283 11.7168 4.37598 11.8204 4.55672 11.8913C4.73745 11.9623 4.93205 11.9993 5.12883 12C5.32456 12.001 5.51853 11.9662 5.69921 11.8975C5.87989 11.8288 6.04359 11.7277 6.18061 11.6002L16.0849 2.27119C16.2191 2.14518 16.3249 1.99628 16.3961 1.83298C16.4673 1.66968 16.5026 1.49518 16.4999 1.31945C16.4971 1.14372 16.4565 0.970196 16.3803 0.80879C16.3041 0.647384 16.1938 0.501255 16.0556 0.378745C15.9175 0.256235 15.7543 0.159744 15.5753 0.094782C15.3963 0.0298196 15.205 -0.00234234 15.0124 0.000132731C14.8198 0.0026078 14.6296 0.0396712 14.4527 0.109207C14.2758 0.178743 14.1156 0.279389 13.9813 0.405399L5.14344 8.74816L2.93762 6.64248Z" fill="white"/>
-              </svg>
-              Подтвердить выбор
-            </a>
           </div>
         </div>
       </div>
-      <footer class="footer">
-        <div class="footer__outer-wrapper">
-          <div class="container">
-            <div class="footer__wrapper">
-              <a href="#" class="footer__logo">
-                <img src="assets/dist/images/header__logo.svg" />
-              </a>
-              <div class="footer__call">
-                <div class="footer__call-caption">Call-центр:</div>
-                <div class="footer__call-number">+7 495 933-66-55</div>
+    </div>
+    <div class="add-order">
+      <div class="container">
+        <div class="complex">
+          <div class="complex__item">
+            <div class="complex__item-top">
+              <div class="complex__item-title">Комплекс №1 (Стол №1)</div>
+              <div class="complex__item-qty">
+                <div class="complex__item-qty-caption">Введите количество:</div>
+                <input type="text" class="complex__item-qty-input" value="0">
               </div>
-              <div class="footer__copy-n-agreement">
-                <div class="footer__copy">© 2020 Европейский Медицинский Центр</div>
-                <a href="#" class="footer__agreement">Пользовательское соглашение</a>
+            </div>
+            <div class="complex__item-content">
+              Круассан с сыром/Топпинг/Фруктовый салат/<br>
+              Апельсиновый сок
+            </div>
+          </div>
+          <div class="complex__item">
+            <div class="complex__item-top">
+              <div class="complex__item-title">Комплекс №2 (Стол №1)</div>
+              <div class="complex__item-qty">
+                <div class="complex__item-qty-caption">Введите количество:</div>
+                <input type="text" class="complex__item-qty-input" value="0">
               </div>
+            </div>
+            <div class="complex__item-content">
+              Круассан с сыром/Топпинг/Фруктовый салат/<br>
+              Апельсиновый сок
+            </div>
+          </div>
+          <div class="complex__item">
+            <div class="complex__item-top">
+              <div class="complex__item-title">Комплекс №3 (Стол №1)</div>
+              <div class="complex__item-qty">
+                <div class="complex__item-qty-caption">Введите количество:</div>
+                <input type="text" class="complex__item-qty-input" value="0">
+              </div>
+            </div>
+            <div class="complex__item-content">
+              Круассан с сыром/Топпинг/Фруктовый салат/<br>
+              Апельсиновый сок
+            </div>
+          </div>
+          <a href="#" class="complex__confirm btn-1 --disabled">
+            <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.93762 6.64248C2.6635 6.41757 2.30629 6.29554 1.93766 6.30087C1.56903 6.3062 1.21625 6.43849 0.950066 6.67121C0.683887 6.90393 0.524005 7.21987 0.502491 7.55564C0.480977 7.89142 0.599422 8.22219 0.834067 8.48162L4.07705 11.5868C4.21283 11.7168 4.37598 11.8204 4.55672 11.8913C4.73745 11.9623 4.93205 11.9993 5.12883 12C5.32456 12.001 5.51853 11.9662 5.69921 11.8975C5.87989 11.8288 6.04359 11.7277 6.18061 11.6002L16.0849 2.27119C16.2191 2.14518 16.3249 1.99628 16.3961 1.83298C16.4673 1.66968 16.5026 1.49518 16.4999 1.31945C16.4971 1.14372 16.4565 0.970196 16.3803 0.80879C16.3041 0.647384 16.1938 0.501255 16.0556 0.378745C15.9175 0.256235 15.7543 0.159744 15.5753 0.094782C15.3963 0.0298196 15.205 -0.00234234 15.0124 0.000132731C14.8198 0.0026078 14.6296 0.0396712 14.4527 0.109207C14.2758 0.178743 14.1156 0.279389 13.9813 0.405399L5.14344 8.74816L2.93762 6.64248Z"
+                fill="white" />
+            </svg>
+            Подтвердить выбор
+          </a>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__outer-wrapper">
+        <div class="container">
+          <div class="footer__wrapper">
+            <a href="#" class="footer__logo">
+              <img src="assets/dist/images/header__logo.svg" />
+            </a>
+            <div class="footer__call">
+              <div class="footer__call-caption">Call-центр:</div>
+              <div class="footer__call-number">+7 495 933-66-55</div>
+            </div>
+            <div class="footer__copy-n-agreement">
+              <div class="footer__copy">© 2020 Европейский Медицинский Центр</div>
+              <a href="#" class="footer__agreement">Пользовательское соглашение</a>
             </div>
           </div>
         </div>
-      </footer>
-    </div>
-    <script src="assets/dist/js/app.js"></script>
-  </body>
+      </div>
+    </footer>
+  </div>
+  <script src="assets/dist/js/app.js?123"></script>
+</body>
+
 </html>

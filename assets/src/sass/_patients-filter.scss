@@ -5,6 +5,13 @@
   bottom: 0;
   left: 0;
   background-color: rgba(192,186,175,.7);
+  visibility: hidden;
+  opacity: 0;
+  transition: all $time;
+  &.--visible{
+    visibility: visible;
+    opacity: 1;
+  }
 }
 .patients-filter__content{
   position: absolute;
@@ -59,15 +66,12 @@
   padding: 0 13px;
   font-size: 16px;
   font-family: $roboto;
-  color: rgba(34,35,37,.4);
+  border-color: #484C51;
+  color: #222325;
   background-image: url('../images/arrow-down-gray.svg');
   background-repeat: no-repeat;
   background-position: right 17px center;
   box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.02), 0px 4px 16px rgba(51, 51, 51, 0.04);
-  &.--active{
-    border-color: #484C51;
-    color: #222325;
-  }
 }
 .patients-filter__btn{
   width: 186px;
@@ -84,4 +88,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.patients-filter__datepicker-datepicker{
+  position: absolute;
+  opacity: 0;
+  transition: all $time;
+  visibility: hidden;
+  &.--visible{
+    opacity: 1;
+    visibility: visible;
+  }
 }
