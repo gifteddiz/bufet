@@ -36,7 +36,8 @@ class Patients {
         onSelect: function(date){
           var target = $(this).attr('data-type');
           console.log($(this));
-          $('.patients-filter__fieldset-select[data-type='+target+']').val(date)
+          $('.patients-filter__fieldset-select[data-type='+target+']').val(date);
+          $('.patients-filter__datepicker-datepicker.--visible').removeClass('--visible');
         }
       });
     });
