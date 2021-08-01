@@ -1,6 +1,6 @@
 class Qty{
   constructor(){
-    $('[data-qty-minus]').on('click', function(e){
+    $('body').on('click', '[data-qty-minus]', function(e){
       e.preventDefault();
       var $val = $(this).siblings('[data-qty-val]');
       var val = parseInt($val.text());
@@ -11,7 +11,7 @@ class Qty{
         $(this).attr('data-qty-disabled', 'disabled');
       }
     })
-    $('[data-qty-plus]').on('click', function(e){
+    $('body').on('click', '[data-qty-plus]', function(e){
       e.preventDefault();
       var $val = $(this).siblings('[data-qty-val]');
       var val = parseInt($val.text());

@@ -11,7 +11,6 @@
 }
 
 .add-order{
-
 }
 .add-order__top{
   margin-bottom: 35px;
@@ -99,6 +98,8 @@
   display: flex;
   align-items: flex-end;
   margin-bottom: 40px;
+  position: relative;
+  z-index: 5;
 }
 .add-order__filter-fieldset{
   position: relative;
@@ -119,6 +120,12 @@
     }
     input{
       padding-left: 44px;
+      color: rgba(72,76,81,.5);
+    }
+    &.--filled{
+      input{
+        color: #000;
+      }
     }
   }
   &.--qty{
@@ -143,6 +150,50 @@
       color: rgba(72,76,81,.5);
     }
   }
+}
+.add-order__filter-name{
+  position: relative;
+  input{
+    border-radius: 15px;
+    border: 1px solid #C4C4C4;
+    height: 50px;
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.02), 0px 4px 16px rgba(51, 51, 51, 0.04);
+    padding: 0 20px;
+    font-size: 16px;
+    width: 100%;
+    &::placeholder{
+      color: rgba(72,76,81,.5);
+    }
+  }
+}
+.add-order__filter-name-dropdown{
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 10px 25px rgba(60, 48, 29, 0.1);
+  border-radius: 15px;
+  padding: 12px 0;
+  background-color: #fff;
+}
+.add-order__filter-name-item{
+  display: block;
+  padding: 12px 15px;
+  font-size: 13px;
+  color: #222325;
+  transition: all $time;
+  text-decoration: none;
+  &:hover{
+    background-color: #EAF1F8;
+    color: #222325;
+    text-decoration: none;
+  }
+}
+.add-order__filter-name-empty{
+  font-style: italic;
+  color: #999;
+  text-align: center;
+  padding: 16px;
 }
 .add-order__filter-label{
   font-family: $roboto;
