@@ -9,6 +9,11 @@ class AddDishForm {
     $(".jsAddDishQty").on("keyup", this.qtyEnterEvent.bind(this));
     $("body").on("click", ".add-order__filter-name-item", this.dishClickEvent.bind(this));
     $(".jsAddDishSubmit").on("click", this.submitClickEvent.bind(this));
+    $("body").on("click", ".dishes__table-remove", this.removeDish.bind(this));
+    $(".jsAddDishRemoveAll").on("click", this.removeAll.bind(this));
+    $("body").on("qty-changed", ".dishes__table-qty-val", this.dishQtyChanged.bind(this));
+    $(".jsAddDishSend").on("click", this.send.bind(this));
+    $("body").on("click", ".jsAddDishCloseOrderAdded", this.closeOrderAdded.bind(this));
   }
   nameEnterEvent() {
     var name = $(".jsAddDishName").val();
@@ -104,8 +109,53 @@ class AddDishForm {
       </div>`;
       $(`.dishes__table [data-id="${dishFull.id}"]`).remove();
       $(".dishes__table-row:first-of-type").after(itemHtml);
+      $(".add-order.--empty").hide();
+      $(".add-order.--filled").show();
     });
     // <div class="dishes__table-full-allergen">Аллергены: ${dishFull.allergen}</div>
+  }
+  removeDish(e) {
+    e.preventDefault();
+    var id = $(e.currentTarget)
+      .closest(".dishes__table-row")
+      .attr("data-id");
+    $(`.dishes__table [data-id="${id}"]`).remove();
+    if ($(".dishes__table [data-id]").length === 0) {
+      $(".add-order.--filled").hide();
+      $(".add-order.--empty").show();
+    }
+    axios.get(`/local/api/removeDish.php?id=${id}`).then(function(response) {
+      console.log("Удаление блюда");
+    });
+  }
+  removeAll(e) {
+    e.preventDefault();
+    $(".dishes__table [data-id]").remove();
+    $(".add-order.--filled").hide();
+    $(".add-order.--empty").show();
+    axios.get(`/local/api/removeAllDishes.php`).then(function(response) {
+      console.log("Удаление всех блюд");
+    });
+  }
+  dishQtyChanged(e) {
+    var qty = $(e.currentTarget).text();
+    var id = $(e.currentTarget)
+      .closest(".dishes__table-row")
+      .attr("data-id");
+    axios.get(`/local/api/updDishQnt.php?id=${id}&qty=${qty}`).then(function(response) {
+      console.log("Сохранение изменения количества");
+    });
+  }
+  send(e) {
+    e.preventDefault();
+    axios.get(`/local/api/orderDishConfirm.php`).then(function(response) {
+      console.log("Подтверждение заказа");
+    });
+    $(".add-order-added").fadeIn();
+  }
+  closeOrderAdded(e) {
+    e.preventDefault();
+    $(".add-order-added").fadeOut();
   }
 }
 export default AddDishForm;
