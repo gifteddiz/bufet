@@ -15,6 +15,12 @@ class AddComplex {
     $(".jsAddComplexCheckpoint").on("click", this.openCheckpoint.bind(this));
     $(".jsAddComplexClearCheckpoint").on("click", this.clearCheckpoint.bind(this));
     $(".jsAddComplexSendCheckpoint").on("click", this.sendCheckpoint.bind(this));
+
+    // Сохраняем значения количества чтобы потом знать какой число было до
+    $('.jsAddComplexItemQty').each(function(ind, el){
+      var qty = $(el).val() || $(el).text();
+      $(el).attr('data-old', qty);
+    })
   }
   changeDayTime(e) {
     e.preventDefault();
@@ -86,39 +92,52 @@ class AddComplex {
       id: $(".jsAddComplexID").val(),
       qty: $(".jsAddComplexQty").val(),
     };
-    axios.get($(".jsAddComplexForm").attr("data-add") + `?id=${request.id}&qty=${request.qty}`).then(function(response) {
-      $(".dishes__table-name.--active").removeClass("--active");
-      $(".dishes__table-full").hide();
-      $(".add-order__filter-fieldset.--filled").removeClass("--filled");
-      $(".jsAddComplexName").val("");
-      $(".jsAddComplexQty").val("");
 
-      var complexFull = response.data.complexFull;
-      $(`.complex__items-wrapper [data-id="${complexFull.id}"]`)
-        .addClass("--active")
-        .find(".complex__item-qty-input")
-        .val(complexFull.qty);
+    $(".dishes__table-name.--active").removeClass("--active");
+    $(".dishes__table-full").hide();
+    $(".add-order__filter-fieldset.--filled").removeClass("--filled");
+    $(".jsAddComplexName").val("");
+    $(".jsAddComplexQty").val("");
 
-      var id = $(`.complex__items-wrapper [data-id="${complexFull.id}"]`)
-        .closest(".complex__items")
-        .attr("id");
-      $(`.complex__tab-item[href="#${id}"]`).trigger("click");
-    });
+    $(`.complex__items-wrapper [data-id="${request.id}"]`)
+      .addClass("--active")
+      .find(".complex__item-qty-input")
+      .val(request.qty)
+      .trigger("qty-changed");
+
+    var daytime_id = $(`.complex__items-wrapper [data-id="${request.id}"]`)
+      .closest(".complex__items")
+      .attr("id");
+    $(`.complex__tab-item[href="#${daytime_id}"]`).trigger("click");
   }
   complexItemQty(e) {
     var id = $(e.currentTarget).attr("data-id");
     var qty = $(e.currentTarget).val() || $(e.currentTarget).text();
+    var oldQty = parseInt($(e.currentTarget).attr('data-old'), 10);
+    $(e.currentTarget).attr('data-old', qty);
     qty = parseInt(qty, 10);
     if (qty > 0) {
       $(e.currentTarget)
         .closest(".complex__item")
         .addClass("--active");
+        if( oldQty === 0 ){
+          axios.get(`/local/api/bufetchica/complex/addComplex.php?id=${id}&qty=${qty}`).then(function(response) {
+            console.log("Добавление комплекса");
+          });
+        } else {
+          axios.get(`/local/api/bufetchica/complex/updComplexQnt.php?id=${id}&qty=${qty}`).then(function(response) {
+            console.log("Обновление количества");
+          });
+        }
+      
     } else {
       $(e.currentTarget)
         .closest(".complex__item")
         .removeClass("--active");
+      axios.get(`/local/api/bufetchica/complex/removeComplex.php?id=${id}`).then(function(response) {
+        console.log("Удаление комплекса");
+      });
     }
-    console.log("Отправка изменений в количестве", { id, qty });
   }
   closeCheckpoint(e) {
     e.preventDefault();
@@ -174,11 +193,11 @@ class AddComplex {
           </div>
           <div class="add-order-checkpoint__item-qty">
             <a href="#" class="add-order-checkpoint__item-qty-btn" data-qty-minus>
-              <img src="assets/dist/images/minus.svg" />
+              <img src="/bufet/assets/dist/images/minus.svg" />
             </a>
             <div class="add-order-checkpoint__item-qty-val jsAddComplexItemQty" data-qty-val  data-id="${itemEl.id}">${itemEl.qty}</div>
             <a href="#" class="add-order-checkpoint__item-qty-btn" data-qty-plus>
-              <img src="assets/dist/images/plus.svg" />
+              <img src="/bufet/assets/dist/images/plus.svg" />
             </a>
           </div>
         </div>`;
@@ -193,11 +212,15 @@ class AddComplex {
     $(".complex__item-qty-input").val(0);
     $(".add-order-checkpoint").fadeOut();
     $(".complex__item.--active").removeClass("--active");
-    console.log("Событие сброса");
+    axios.get(`/local/api/bufetchica/complex/removeAllComplexes.php`).then(function(response) {
+      console.log("Событие сброса");
+    });
   }
   sendCheckpoint(e) {
     e.preventDefault();
-    console.log("Событие подтверждения");
+    axios.get(`/local/api/bufetchica/complex/orderComplexConfirm.php`).then(function(response) {
+      console.log("Событие подтверждения");
+    });
     $(".add-order-checkpoint").fadeOut();
     $(".add-order-added").fadeIn();
   }

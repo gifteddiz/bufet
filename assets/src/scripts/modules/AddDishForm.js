@@ -124,7 +124,7 @@ class AddDishForm {
       $(".add-order.--filled").hide();
       $(".add-order.--empty").show();
     }
-    axios.get(`/local/api/removeDish.php?id=${id}`).then(function(response) {
+    axios.get(`/local/api/bufetchica/dish/removeDish.php?id=${id}`).then(function(response) {
       console.log("Удаление блюда");
     });
   }
@@ -133,7 +133,7 @@ class AddDishForm {
     $(".dishes__table [data-id]").remove();
     $(".add-order.--filled").hide();
     $(".add-order.--empty").show();
-    axios.get(`/local/api/removeAllDishes.php`).then(function(response) {
+    axios.get(`/local/api/bufetchica/dish/removeAllDishes.php`).then(function(response) {
       console.log("Удаление всех блюд");
     });
   }
@@ -142,13 +142,13 @@ class AddDishForm {
     var id = $(e.currentTarget)
       .closest(".dishes__table-row")
       .attr("data-id");
-    axios.get(`/local/api/updDishQnt.php?id=${id}&qty=${qty}`).then(function(response) {
+    axios.get(`/local/api/bufetchica/dish/updDishQnt.php?id=${id}&qty=${qty}`).then(function(response) {
       console.log("Сохранение изменения количества");
     });
   }
   send(e) {
     e.preventDefault();
-    axios.get(`/local/api/orderDishConfirm.php`).then(function(response) {
+    axios.get(`/local/api/bufetchica/dish/orderDishConfirm.php`).then(function(response) {
       console.log("Подтверждение заказа");
     });
     $(".add-order-added").fadeIn();
