@@ -2,6 +2,7 @@ import axios from "axios";
 
 class AddComplex {
   constructor() {
+    $(".jsAddComplexDiet").on("change", this.changeDiet.bind(this));
     $(".jsAddComplexDayTime").on("click", this.changeDayTime.bind(this));
     $(".jsAddComplexForm").on("submit", function(e) {
       e.preventDefault();
@@ -15,12 +16,26 @@ class AddComplex {
     $(".jsAddComplexCheckpoint").on("click", this.openCheckpoint.bind(this));
     $(".jsAddComplexClearCheckpoint").on("click", this.clearCheckpoint.bind(this));
     $(".jsAddComplexSendCheckpoint").on("click", this.sendCheckpoint.bind(this));
+    $(".add-order-added__btn.btn-1").on("click", this.closeAddedPopup.bind(this));
 
     // Сохраняем значения количества чтобы потом знать какой число было до
     $('.jsAddComplexItemQty').each(function(ind, el){
       var qty = $(el).val() || $(el).text();
       $(el).attr('data-old', qty);
     })
+
+    // Устанавливаем значение диеты в зависимости от query
+    const urlParams = new URLSearchParams(window.location.search);
+    this.diet = urlParams.get('diet');
+    $('.jsAddComplexDiet').val(this.diet);
+  }
+  changeDiet(e){
+    var val = $(e.currentTarget).val();
+    if(val===''){
+      window.location.href = window.location.protocol + "//" + window.location.host + window.location.pathname;
+    } else {
+      window.location.href = window.location.protocol + "//" + window.location.host + window.location.pathname + '?diet=' + val;
+    }
   }
   changeDayTime(e) {
     e.preventDefault();
@@ -36,11 +51,13 @@ class AddComplex {
   }
   nameEnterEvent() {
     var name = $(".jsAddComplexName").val();
+    var urlString = $(".jsAddComplexForm").attr("data-name") + "?q=" + name;
+    if(this.diet) urlString += '&diet='+this.diet;
     $(".jsAddComplexName")
       .parent()
       .removeClass("--filled");
     this.checkIfFilled();
-    axios.get($(".jsAddComplexForm").attr("data-name") + "?q=" + name).then(function(response) {
+    axios.get(urlString).then(function(response) {
       var complexes = response.data.complexes;
       var complexesHtml = "";
       $(".jsAddComplexDropdown").html("");
@@ -145,67 +162,46 @@ class AddComplex {
   }
   openCheckpoint(e) {
     e.preventDefault();
-    var resultArr = [];
+    $(e.currentTarget).addClass('--disabled');
+    axios.get(`/local/api/bufetchica/complex/getOrder.php`).then(function(response) {
+      $(e.currentTarget).removeClass('--disabled');
+      var resultArr = response.data;
+      
+      // Создаем из массива элементы в чекпоинте
+      resultArr.forEach((el, ind) => {
+        var itemsHtml = "";
+        var $dayTime = $(".add-order-checkpoint__daytime").eq(ind);
 
-    // Собираем существующие элементы в массив
-    $(".complex__items").each(function(ind, el) {
-      resultArr.push([]);
-      $(el)
-        .find(".complex__item")
-        .each(function(itemInd, itemEl) {
-          if (
-            $(itemEl)
-              .find(".complex__item-qty-input")
-              .val() > 0
-          ) {
-            resultArr[ind].push({
-              id: $(itemEl).attr("data-id"),
-              title: $(itemEl)
-                .find(".complex__item-title")
-                .text(),
-              qty: $(itemEl)
-                .find(".complex__item-qty-input")
-                .val(),
-              text: $(itemEl)
-                .find(".complex__item-content")
-                .html(),
-            });
-          }
+        $dayTime.show();
+        if (!el.length) {
+          $dayTime.hide();
+          return;
+        }
+
+        el.forEach((itemEl, itemInd) => {
+          itemsHtml += `<div class="add-order-checkpoint__item" data-id="${itemEl.id}">
+            <div class="add-order-checkpoint__item-cont">
+              <div class="add-order-checkpoint__item-title">${itemEl.title}</div>
+              <div class="add-order-checkpoint__item-text">${itemEl.text}</div>
+            </div>
+            <div class="add-order-checkpoint__item-qty">
+              <a href="#" class="add-order-checkpoint__item-qty-btn" data-qty-minus>
+                <img src="/bufet/assets/dist/images/minus.svg" />
+              </a>
+              <div class="add-order-checkpoint__item-qty-val jsAddComplexItemQty" data-qty-val  data-id="${itemEl.id}">${itemEl.qty}</div>
+              <a href="#" class="add-order-checkpoint__item-qty-btn" data-qty-plus>
+                <img src="/bufet/assets/dist/images/plus.svg" />
+              </a>
+            </div>
+          </div>`;
         });
-    });
-
-    // Создаем из массива элементы в чекпоинте
-    resultArr.forEach((el, ind) => {
-      var itemsHtml = "";
-      var $dayTime = $(".add-order-checkpoint__daytime").eq(ind);
-
-      $dayTime.show();
-      if (!el.length) {
-        $dayTime.hide();
-        return;
-      }
-
-      el.forEach((itemEl, itemInd) => {
-        itemsHtml += `<div class="add-order-checkpoint__item" data-id="${itemEl.id}">
-          <div class="add-order-checkpoint__item-cont">
-            <div class="add-order-checkpoint__item-title">${itemEl.title}</div>
-            <div class="add-order-checkpoint__item-text">${itemEl.text}</div>
-          </div>
-          <div class="add-order-checkpoint__item-qty">
-            <a href="#" class="add-order-checkpoint__item-qty-btn" data-qty-minus>
-              <img src="/bufet/assets/dist/images/minus.svg" />
-            </a>
-            <div class="add-order-checkpoint__item-qty-val jsAddComplexItemQty" data-qty-val  data-id="${itemEl.id}">${itemEl.qty}</div>
-            <a href="#" class="add-order-checkpoint__item-qty-btn" data-qty-plus>
-              <img src="/bufet/assets/dist/images/plus.svg" />
-            </a>
-          </div>
-        </div>`;
+        $dayTime.find(".add-order-checkpoint__items").html(itemsHtml);
       });
-      $dayTime.find(".add-order-checkpoint__items").html(itemsHtml);
+
+      $(".add-order-checkpoint").fadeIn();
     });
 
-    $(".add-order-checkpoint").fadeIn();
+    
   }
   clearCheckpoint(e) {
     e.preventDefault();
@@ -223,6 +219,10 @@ class AddComplex {
     });
     $(".add-order-checkpoint").fadeOut();
     $(".add-order-added").fadeIn();
+  }
+  closeAddedPopup(e) {
+    e.preventDefault();
+    $(".add-order-added").fadeOut();
   }
 }
 

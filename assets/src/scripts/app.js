@@ -7,6 +7,7 @@ import AddComplex from "./modules/AddComplex";
 import OrderList from "./modules/OrderList";
 import AddDishForm from "./modules/AddDishForm";
 import OrderScheduleComment from "./modules/OrderScheduleComment";
+import CheckboxToParam from "./modules/CheckboxToParam";
 
 new MakeSticky();
 new SignIn();
@@ -17,3 +18,4 @@ new AddComplex();
 new OrderList();
 new AddDishForm();
 new OrderScheduleComment();
+new CheckboxToParam();
