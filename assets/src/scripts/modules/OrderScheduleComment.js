@@ -17,19 +17,21 @@ class OrderScheduleComment{
   }
   removeComment(e){
     e.preventDefault();
+    var that = this;
     var url = $(this).attr('data-url');
     axios.delete(url).then(function(){
-      $(this).closest('.order-schedule__item-comment').hide().siblings('.order-schedule__item-comment.--new').show();
+      $(that).closest('.order-schedule__item-comment').hide().siblings('.order-schedule__item-comment.--new').show().find('.order-schedule__item-comment-input').val('');
     }).catch(function(e){
       alert('Ошибка запроса на удаление');
     });
   }
   addComment(e){
     e.preventDefault();
+    var that = this;
     var url = $(this).attr('data-url');
     var text = $(this).siblings('.order-schedule__item-comment-input').val();
     axios.post(url, {"text": text}).then(function(){
-      $(this).closest('.order-schedule__item-comment').hide().siblings('.order-schedule__item-comment.--exist').show().find('.order-schedule__item-comment-badge-text').text(text);
+      $(that).closest('.order-schedule__item-comment').hide().siblings('.order-schedule__item-comment.--exist').show().find('.order-schedule__item-comment-badge-text').text(text);
     }).catch(function(e){
       alert('Ошибка запроса на сохранение комментария');
     });

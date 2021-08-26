@@ -26,14 +26,14 @@ class OrderList{
     var dateFormat = "mm/dd/yy",
       from = $( "#dateFrom" )
         .datepicker({
-          defaultDate: "+1w",
+          defaultDate: "+1d",
           numberOfMonths: 1
         })
         .on( "change", function() {
           to.datepicker( "option", "minDate", getDate( this ) );
         }),
       to = $( "#dateTo" ).datepicker({
-        defaultDate: "+1w",
+        defaultDate: "+1d",
         numberOfMonths: 1
       })
       .on( "change", function() {
