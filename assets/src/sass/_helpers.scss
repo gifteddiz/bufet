@@ -133,9 +133,10 @@ a{
     height: 24px;
   }
   input{
-    visibility: hidden;
+    // visibility: hidden;
     position: absolute;
-    left: -9999px;
+    // left: -9999px;
+    opacity: 0;
     &:checked{
       &+.checkbox__view{
         opacity: 1;
